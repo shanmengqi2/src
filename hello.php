@@ -12,6 +12,9 @@
 
 echo "<h1>What an idiot I am!!</h1>";
 
+echo "<div class='container-fluid'></div>";
+
+
 echo "<table border='1px'>
 <tr>
 <td>123</td>
