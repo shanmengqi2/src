@@ -76,6 +76,11 @@
     </ul>
 
     <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.3/getting-started/download/">Download</a>
+
+
+    <?php
+    echo '<div>自动补全</div>'
+    ?>
 </header>
 </body>
 </html>

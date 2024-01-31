@@ -10,13 +10,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+      <link rel="stylesheet" href="footer/fonts/icomoon/style.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="footer/css/bootstrap.min.css">
+
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="footer/css/style.css">
 
     <title>Footer 01</title>
   </head>
