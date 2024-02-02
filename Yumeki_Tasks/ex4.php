@@ -78,8 +78,10 @@
     <?php
     if(isset($_POST['sub4'])){
         $num = $_POST['numInput'];
-        for($i=0;$i<$num;$i++){
-           echo $i+1 . " ";
+        $i = 0;
+        while($i<$num){
+            echo $i+1 . " ";
+            $i++;
         }
     }
     ?>
