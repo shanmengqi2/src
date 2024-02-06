@@ -76,8 +76,8 @@
         <input type="submit" value="Submit" name="sub4">
     </form>
     <?php
-    if(isset($_POST['sub4'])){
-        $num = $_POST['numInput'];
+    if(isset($_POST['numInput'])){
+        $num = $_POST['sub4'];
         $i = 0;
         while($i<$num){
             echo $i+1 . " ";
