@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="email">Email:</label><input type="email" name="email" id="email" onblur="emailValidate()">
+    <br>
+    <span id="emailError"></span>
+    <input type="submit" value="提交" name="submit">
+</form>
+
+    <button type="button" onclick="alll()">anniu</button>
+
+
+<script type="text/javascript">
+    function alll(){
+        alert('ceshiyixia');
+    }
+
+    function emailValidate(){
+        const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let email = document.getElementById("email").value;
+        if(pattern.test(email)){
+            document.getElementById("emailError").innerHTML = "it's ok";
+        }
+        else {
+            document.getElementById("emailError").innerHTML = "格式错误";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册表单校验</title>
+    
+
+</head>
+<body>
+<form name="register" method="post">
+    <label>用户名：
+        <input type="text" name="username" placeholder="请输入用户名" required></label><br>
+    <label for="email">Email:</label><input type="email" id="email" name="email" onblur="validateEmail()"><br>
+    <span id="emailError"></span><br>
+    <label>
+        密码：<input type="password" name="pass1" id="pass1" required onblur="validatePass()">
+        再次输入密码：<input type="password" name="pass2" id="pass2" required onblur="validatePass()"><br>
+        <span id="passError"></span><br>
+    </label>
+
+
+    <input type="submit" name="sub1" value="注册" onclick="submitForm(this)">
+</form>
+
+<script>
+    function submitFormEasy(){
+        if(validateEmail() && validatePass()){
+            document.forms['register'].action = "processRegLogin.php";
+        }
+        else{
+            alert("输入有误，请重新输入");
+        }
+    }
+
+    function submitFormEasyToo(){
+        if(validatePass() && validateEmail()){
+            document.forms[0].action = "processRegLogin.php";
+        }
+        else{
+            alert("输入有误，请重新输入");
+        }
+    }
+    function submitForm(submitButton){
+        if(validatePass() && validateEmail()){
+            submitButton.form.action = "processRegLogin.php";
+        }
+        else{
+            alert("输入有误，请重新输入！");
+        }
+    }
+    function validateEmail(){
+        //a@b.cii,正则表达式
+        const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let email = document.getElementById("email").value;
+        if(pattern.test(email)){
+
+            document.getElementById("emailError").innerHTML = "格式ok";
+            return true;
+        }
+        else{
+            document.getElementById("emailError").innerHTML = "格式不ok";
+            return false;
+        }
+    }
+
+    function validatePass(){
+        let pass1 = document.getElementById("pass1").value;
+        let pass2 = document.getElementById("pass2").value;
+        if(pass1 === pass2){
+            document.getElementById("passError").innerHTML = "输入一致，ok";
+            return true;
+        }
+        else {
+            document.getElementById("passError").innerHTML = "输入不一致，请重新输入";
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
